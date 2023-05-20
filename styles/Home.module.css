@@ -1,0 +1,50 @@
+.gradientText {
+  background: -webkit-linear-gradient(left, #1B6DF6, #6D18EF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.container {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("../assets/slider_pic1.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.aboutBackground {
+  /* min-height: 100vh; */
+  width: 400px;
+  background-image: url("../assets/dots_background.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.grayBackground {
+  min-height: 100vh;
+  background-image: url("../assets/images/gray_bg.jpeg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.footerBackground {
+  background-image: url("../assets/images/bg-footer.jpeg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.overlayBackground {
+  /* min-height: 100vh; */
+  background-image: url("../assets/images/white_overlay.png");
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+  background-size: cover;
+  
+}
+
+@media (max-width:768px) {
+  .container {
+    min-height: 80vh;
+  }
+  .grayBackground {
+    min-height: auto;}
+}

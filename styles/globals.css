@@ -1,3 +1,72 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.mainSection{
+  padding: 0% 10%;
+}
+
+.details_slider .slick-dots{
+  display: flex;
+}
+
+.details_slider .slick-dots li{
+  width: 23%;
+  margin: 0;
+}
+
+.container {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .25s ease;
+  z-index: 2;
+}
+
+.container:hover .overlay {
+  width: 100%;
+}
+
+
+
+.container1::before {  
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+.container1:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.container1::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  inset: 0 0 0 0;
+  background: linear-gradient(to right, #1B6DF6, #6D18EF);
+  z-index: -1;
+  transition: transform .3s ease;
+}
+
+.container1 {
+  position: relative;
+  font-size: 5rem;
+}
+
+@media (max-width:1024px) {
+  .px-\[10\%\], .px-\[12\%\] {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+}

@@ -1,4 +1,16 @@
+import Navbar from "@/sections/navbar";
+import ServiceDetailsCard from "@/components/service_details_card";
+import SliderComp from "@/sections/slider";
+import HeaderBar from "@/sections/header_bar";
 import Head from "next/head";
+import styles from "../styles/Home.module.css";
+import About from "@/sections/about";
+import ServiceCard from "@/components/service_card";
+import ServicesDetails from "@/sections/services_details";
+import ServiceDetailsSlider from "@/components/service_details_slider";
+import MultipleItems from "@/sections/check";
+import SlickSlider from "@/sections/check";
+import Footer from "@/sections/footer";
 
 export default function Home() {
   return (
@@ -9,7 +21,12 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1 className="text-3xl font-bold">Hello world!</h1>
+      <HeaderBar />
+      <Navbar />
+      <SliderComp />
+      <About />
+      <ServicesDetails />
+      <Footer />
     </>
   );
 }
