@@ -130,6 +130,7 @@ export default function ServiceDetailsSlider() {
       >
         {services.map((service, index) => (
           <div
+          key={index}
             onMouseEnter={() => {
               console.log("hamdele");
               handleHoverEnter(index);

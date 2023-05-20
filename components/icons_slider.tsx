@@ -33,7 +33,7 @@ const IconsSlider = () => {
     <Slider {...settings} className="">
       {icons.map((icon, index) => {
         return (
-          <div className="group w-full  h-full overflow-hidden">
+          <div key={index} className="group w-full  h-full overflow-hidden">
             <Image
               src={require(`../assets/icons/${icon}_icon.png`)}
               alt={`${icon} icon`}
