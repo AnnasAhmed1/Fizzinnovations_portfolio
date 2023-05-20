@@ -66,8 +66,8 @@ const ServiceDetailsCard = ({ className }: { className: any }) => {
         "
       ></div>
       <p className="text-[#57586d]">
-        We're wildly passionate about our purpose, and it has us transforming
-        everything.
+        We&#39;re wildly passionate about our purpose, and it has us
+        transforming everything.
       </p>
     </div>
   );
