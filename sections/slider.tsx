@@ -16,31 +16,34 @@ export default function SliderComp() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed:6000
+
   };
 
-  return (
-    // <Slider {...settings}>
-    <div>
+  const SliderContent = () => {
+    return (
       <div
         className={`
-       ${styles.container}
-          flex
-          flex-col
-          gap-6
-          px-[10%]
-          justify-center
-          `}
+   ${styles.purpleOverlay}
+      flex
+      flex-col
+      gap-6
+      px-[10%]
+      justify-center
+      `}
       >
         <TextWithBackground text="We are IT service agency" fontSize="22" />
         <h1
           className="
-            font-bold
-            text-7xl
-            max-md:text-[40px]
-            max-sm:text-[28px]
-            text-white
-            animate-text-right-fade-in
-            "
+      font-bold
+      text-7xl
+      max-md:text-[40px]
+      max-sm:text-[28px]
+      text-white
+      animate-text-right-fade-in
+      "
         >
           Prosper in this volatile
           <br />
@@ -48,15 +51,15 @@ export default function SliderComp() {
         </h1>
         <p
           className="
-            text-xl
-            max-md:text-base
-            max-sm:text-sm
-            text-white
-            w-[50%]
-            max-lg:w-[60%]
-            max-md:w-[90%]
-            animate-text-right-fade-in
-            "
+      text-xl
+      max-md:text-base
+      max-sm:text-sm
+      text-white
+      w-[50%]
+      max-lg:w-[60%]
+      max-md:w-[90%]
+      animate-text-right-fade-in
+      "
         >
           We place you at the centre of international networks to advance your
           strategic interests.
@@ -65,6 +68,30 @@ export default function SliderComp() {
           <ButtonComp text="Our Team" className="animate-text-right-fade-in" />
         </div>
       </div>
+    );
+  };
+
+  return (
+    <div>
+      <Slider {...settings}>
+        <div
+          className={`
+          ${styles.container}
+          bg-[url('../assets/slider_pic1.jpg')]
+          `}
+        >
+          <SliderContent />
+        </div>
+        <div
+          className={`
+          ${styles.container}
+          bg-[url('../assets/slider_pic2.jpeg')]
+          `}
+        >
+          <SliderContent />
+        </div>
+      </Slider>
+
       <div
         className="
           bg-[#E1E5ED]
@@ -131,7 +158,5 @@ export default function SliderComp() {
         </div>
       </div>
     </div>
-
-    // </Slider>
   );
 }
