@@ -32,8 +32,9 @@ const PlanCard = () => {
         
         "
       >
-        <H4 text="Basic Plan"
-        className="
+        <H4
+          text="Basic Plan"
+          className="
         mb-[10px]
         "
         />
@@ -75,6 +76,7 @@ const PlanCard = () => {
       >
         {featuresList?.map((v, i) => (
           <li
+            key={i}
             className={`
           text-[#67687a]
           flex
@@ -82,7 +84,7 @@ const PlanCard = () => {
           gap-[2px]
           pl-3
           py-3
-          ${i%2!==0? "bg-[#EEF2FB]" :""}
+          ${i % 2 !== 0 ? "bg-[#EEF2FB]" : ""}
           max-lg:text-sm
 
           `}
@@ -98,10 +100,9 @@ const PlanCard = () => {
           </li>
         ))}
       </ul>
-     
 
       <button
-      className={`
+        className={`
     bg-blue-purple-gradient
     text-white
     font-bold
@@ -111,10 +112,9 @@ const PlanCard = () => {
     mx-[7%]
     max-sm:mx-[3%]
     `}
-    >
-      Get a free trial
-   
-    </button>
+      >
+        Get a free trial
+      </button>
     </div>
   );
 };
