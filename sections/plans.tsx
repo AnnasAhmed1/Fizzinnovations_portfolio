@@ -36,9 +36,9 @@ const Plans = () => {
         max-sm:grid-cols-1
         "
       >
-        <PlanCard />
-        <PlanCard />
-        <PlanCard />
+        <PlanCard key={1} />
+        <PlanCard key={2} />
+        <PlanCard key={3} />
       </div>
     </section>
   );
