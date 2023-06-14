@@ -3,7 +3,17 @@ import HeartIcon from "./hea";
 import Image from "next/image";
 import { H3, H4, H5 } from "./helper";
 
-const ServiceDetailsCard = ({ className }: { className: any }) => {
+const ServiceDetailsCard = ({
+  className,
+  title,
+  description,
+  icon,
+}: {
+  className: any;
+  title: string;
+  description: string;
+  icon: string;
+}) => {
   return (
     <div
       className={`
@@ -48,7 +58,7 @@ const ServiceDetailsCard = ({ className }: { className: any }) => {
         }}
       >
         <Image
-          src={require("../assets/icons/UIUX_icon.png")}
+          src={require(`../assets/icons/${icon}.png`)}
           alt="ui/ux"
           className="w-[42px]"
           style={{
@@ -56,7 +66,7 @@ const ServiceDetailsCard = ({ className }: { className: any }) => {
           }}
         />
       </div>
-      <H5 text="UI/UX Design" />
+      <H5 text={title} />
       <div
         className="
         bg-blue-purple-gradient
@@ -66,8 +76,7 @@ const ServiceDetailsCard = ({ className }: { className: any }) => {
         "
       ></div>
       <p className="text-[#57586d]">
-        We&#39;re wildly passionate about our purpose, and it has us
-        transforming everything.
+        {description}
       </p>
     </div>
   );

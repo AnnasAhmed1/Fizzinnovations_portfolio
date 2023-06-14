@@ -1,10 +1,10 @@
 import Image from "next/image";
 import React from "react";
-import styles from "../styles/Home.module.css";
-import WhiteButtonComp from "@/components/white_button_comp";
 import ButtonComp from "@/components/button_comp";
 import { H1, H2 } from "@/components/helper";
 import CallIcon from "@mui/icons-material/Call";
+// import AOS from 'aos';
+import "aos/dist/aos.css";
 
 import TextWithBackground from "@/components/text_with_background";
 
@@ -23,6 +23,9 @@ const About = () => {
       max-md:flex-col
       max-md:gap-12
       "
+      data-aos="fade-up"
+      // data-aos-anchor-placement="bottom-center"
+      // data-aos-duration="15000"
     >
       <div
         className={`
@@ -49,9 +52,9 @@ const About = () => {
       >
         <TextWithBackground text="About our company" />
         <H1
-          initialText="Choose"
-          colouredText=" The Best"
-          endText=" IT Service Company"
+          initialText="Find"
+          colouredText=" The Perfect "
+          endText="IT Service for Your Business"
         />
         <p
           className="
@@ -62,11 +65,14 @@ const About = () => {
         pl-4
         "
         >
-          An IT firm or MSP who keeps your IT running smoothly at all times is
-          like a plumber who fixes your pipes; that's what they are supposed to
-          do. Many IT firms struggle.
+          At Fizz Innovations, we’re a high-energy team of tech aficionados who
+          thrive on creativity and problem-solving. With years of know-how under
+          our belts, we’ve got the smarts to build tech that really delivers.
+          Our mission is to leverage our skills to help our clients take charge
+          of their futures and thrive in today’s rapidly-evolving technological
+          landscape.
         </p>
-        <div
+        {/* <div
           className="
         
         justify-between
@@ -115,7 +121,7 @@ const About = () => {
             <br />
             Support
           </h4>
-        </div>
+        </div> */}
 
         <div
           className="

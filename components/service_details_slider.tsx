@@ -85,35 +85,38 @@ export default function ServiceDetailsSlider() {
   };
   const [services, setServices] = useState([
     {
-      title: "UI/UX Design",
+      title: "Web Development",
+      description:
+        "Creating tailored web applications that meet your unique needs. From user interface design to complex functionality integration.",
+      icon: "web_development",
       hover: false,
     },
     {
-      title: "UI/UX Design",
+      title: "App Development",
+      description:
+        "Creating custom mobile applications that are designed to fit your unique business needs. From intuitive user interfaces to seamless back-end integration.",
+      icon: "app_development",
       hover: false,
     },
     {
-      title: "UI/UX Design",
+      title: "SEO",
+      description:
+        "Optimizing websites to rank higher in search engine results pages. Reach your target audience and achieve your business goals with our proven SEO strategies.",
+      icon: "seo",
       hover: false,
     },
     {
-      title: "UI/UX Design",
+      title: "Graphic Designing",
+      description:
+        "Creating stunning designs that communicate your brand message and stand out in a crowded marketplace. From logos to marketing materials.",
+      icon: "graphic_designing",
       hover: false,
     },
     {
-      title: "UI/UX Design",
-      hover: false,
-    },
-    {
-      title: "UI/UX Design",
-      hover: false,
-    },
-    {
-      title: "UI/UX Design",
-      hover: false,
-    },
-    {
-      title: "UI/UX Design",
+      title: "Video Editing",
+      description:
+        "Transform your footage into captivating masterpieces. With seamless transitions, stunning visual effects, and meticulous editing.",
+      icon: "web_development",
       hover: false,
     },
   ]);
@@ -123,14 +126,14 @@ export default function ServiceDetailsSlider() {
       <Slider
         className="
         details_slider
-      min-h-[391px]
+        min-h-[391px]
       "
         {...mergedSettings}
         customPaging={customPaging}
       >
         {services.map((service, index) => (
           <div
-          key={index}
+            key={index}
             onMouseEnter={() => {
               console.log("hamdele");
               handleHoverEnter(index);
@@ -141,9 +144,16 @@ export default function ServiceDetailsSlider() {
             }}
           >
             {service.hover ? (
-              <ServiceDetailsCardHover />
+              <ServiceDetailsCardHover
+              title={service.title}
+              icon={service.icon}
+              />
             ) : (
-              <ServiceDetailsCard className={``} />
+              <ServiceDetailsCard className={``}
+              title={service.title}
+              description={service.description}
+              icon={service.icon}
+              />
             )}
           </div>
         ))}

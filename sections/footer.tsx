@@ -28,8 +28,16 @@ const Footer = () => {
       `}
       >
         <div
+        className="
+        bg-[#0F0F35]
+        bg-opacity-80
+        "
+        >
+
+        <div
           className="
           bg-[#0F0F35]
+          bg-opacity-75
           flex
           max-md:flex-col
           max-md:items-start
@@ -54,7 +62,7 @@ const Footer = () => {
             font-bold
             "
             >
-              Looking for the Best IT Business Solutions?
+              Ready to shake things up with Fizz Innovations?
             </h1>
             <p
               className="
@@ -62,7 +70,7 @@ const Footer = () => {
             text-[#C9C8C8]
             "
             >
-              As a app web crawler expert, We will help to organize.
+              Drop us a line today, and we'll set up a free consultation to discuss your project
             </p>
           </div>
 
@@ -96,7 +104,7 @@ const Footer = () => {
               />
               <p
                 className="
-              text-[#9D9D9D]
+              text-[#bababa]
               "
               >
                 We work with a passion of taking challenges and creating new
@@ -137,7 +145,7 @@ const Footer = () => {
               </div>
               <p
                 className="
-          text-[#9D9D9D]
+          text-[#bababa]
           "
               >
                 Subscribe our newsletter to get our latest update & news.
@@ -182,7 +190,7 @@ const Footer = () => {
                 {socialMedia.map((v, i) => (
                   <p
                     className="
-                  text-[#494949]
+                  text-[#bababa]
                   "
                   >
                     {v}
@@ -212,7 +220,7 @@ const Footer = () => {
 
               <p
                 className="
-            text-[#9D9D9D]
+            text-[#bababa]
             text-[14px]
             flex
             items-center
@@ -224,7 +232,7 @@ const Footer = () => {
               </p>
               <p
                 className="
-            text-[#9D9D9D]
+            text-[#bababa]
             text-[14px]
             flex
             items-center
@@ -243,7 +251,7 @@ const Footer = () => {
                 Open Hours:
                 <br />
                 <span
-                  className="font-normal text-[#9D9D9D]
+                  className="font-normal text-[#bababa]
              "
                 >
                   Mon-Sun: 9 am - 12 am
@@ -305,6 +313,8 @@ const Footer = () => {
             </div>
           </div>
         </div>
+        </div>
+
     </footer>
   );
 };

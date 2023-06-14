@@ -27,6 +27,7 @@ const HeaderBar = () => {
     py-4
     max-lg:hidden
     "
+    
     >
       {arr.map((v, i) => (
         <p

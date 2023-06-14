@@ -5,7 +5,13 @@ import { H3, H4, H5 } from "./helper";
 import styles from "../styles/Home.module.css";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
-const ServiceDetailsCardHover = () => {
+const ServiceDetailsCardHover = ({
+  title,
+  icon,
+}: {
+  title: string;
+  icon: string;
+}) => {
   return (
     <div
       className="
@@ -68,7 +74,7 @@ const ServiceDetailsCardHover = () => {
             }}
           >
             <Image
-              src={require("../assets/icons/UIUX_icon.png")}
+              src={require(`../assets/icons/${icon}.png`)}
               alt="ui/ux"
               className="w-[42px]"
               style={{
@@ -79,7 +85,7 @@ const ServiceDetailsCardHover = () => {
         </div>
       </div>
 
-      <H5 text="UI/UX Design" />
+      <H5 text={title} />
       <p
         className={`
             ${styles.gradientText}
@@ -91,7 +97,7 @@ const ServiceDetailsCardHover = () => {
             `}
       >
         Learn More
-        <ChevronRightIcon className={`text-[#6D18EF] mt-[2px] text-[20px]`} />
+        <ChevronRightIcon className={`text-[#63c4ff] mt-[2px] text-[20px]`} />
       </p>
     </div>
   );

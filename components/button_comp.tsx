@@ -4,10 +4,12 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 const ButtonComp = ({
   text,
   width = true,
+  padding,
   className,
 }: {
   text: string;
   width?: boolean;
+  padding?: string;
   className?: string;
 }) => {
   return (
@@ -16,9 +18,10 @@ const ButtonComp = ({
     bg-blue-purple-gradient
     text-white
     font-bold
-    py-4
+   ${padding ? padding : "py-4"}
     rounded-[50px]
    ${width ? "w-[180px]" : ""}
+   ${className}
     `}
     >
       {text}

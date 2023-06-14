@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { H4 } from "./helper";
 
-const ServiceCard = () => {
+const ServiceCard = ({service,icon}:{service:string,icon:string}) => {
   return (
     <div
       className="
@@ -27,12 +27,15 @@ const ServiceCard = () => {
       "
     >
       <Image
-        src={require("../assets/icons/UIUX_icon.png")}
+        src={require(`../assets/icons/${icon}`)}
         alt="ui/ux"
         className="w-16 "
       />
+      <svg>
+
+      </svg>
       <h2 className={`text-xl font-bold`}>
-        UI/UX Design
+        {service}
         <br />
         Services
       </h2>

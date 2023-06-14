@@ -50,19 +50,20 @@ module.exports = {
         },
       },
       linearGradientColors: {
-        "blue-purple": ["#1B6DF6", "#6D18EF"],
+        "blue-purple": ["#1B6DF6", "#63c4ff"],
       },
       backgroundImage: (theme) => ({
-        "blue-purple-gradient": "linear-gradient(to right, #1B6DF6, #6D18EF)",
+        // "blue-purple-gradient": "linear-gradient(to right, #1B6DF6, #63c4ff)",
+        "blue-purple-gradient": "linear-gradient(to right, #1B6DF6, #63c4ff)",
       }),
       // colors: {
       //   bluepurple: {
-      //     gradient: "linear-gradient(to right, #1B6DF6, #6D18EF)",
+      //     gradient: "linear-gradient(to right, #1B6DF6, #63c4ff)",
       //   },
       // },
       textColor: {
         "bluepurple-gradient": {
-          backgroundImage: "linear-gradient(to right, #1B6DF6, #6D18EF)",
+          backgroundImage: "linear-gradient(to right, #1B6DF6, #63c4ff)",
           "-webkit-background-clip": "text",
           "-webkit-text-fill-color": "transparent",
         },
@@ -70,6 +71,7 @@ module.exports = {
       boxShadow: {
         custom: "0 11px 27px rgba(0,9,71,.13)",
         dark: "0 6px 6px rgba(0,108,255,.3)",
+        cardShadow: "0 1px 10px rgba(0,0,0,6%)",
       },
     },
   },

@@ -1,5 +1,5 @@
 .gradientText {
-  background: -webkit-linear-gradient(left, #1B6DF6, #6D18EF);
+  background: -webkit-linear-gradient(left, #1B6DF6, #63c4ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -35,7 +35,8 @@
   background-size: cover;
 }
 .footerBackground {
-  background-image: url("../assets/images/bg-footer.jpeg");
+  background-image: url("../assets/images/footer_background.jpeg");
+  /* background-color: antiquewhite; */
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;

@@ -10,9 +10,16 @@ import ServicesDetails from "@/sections/services_details";
 import ServiceDetailsSlider from "@/components/service_details_slider";
 import MultipleItems from "@/sections/check";
 import SlickSlider from "@/sections/check";
+import initializeAOS from "../utils/aos";
 import Footer from "@/sections/footer";
+import { useEffect } from "react";
+import Plans from "@/sections/plans";
+import ProjectsGallery from "@/sections/projects_gallery";
 
 export default function Home() {
+  useEffect(() => {
+    initializeAOS();
+  }, []);
   return (
     <>
       <Head>
@@ -21,12 +28,20 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <HeaderBar />
-      <Navbar />
-      <SliderComp />
-      <About />
-      <ServicesDetails />
-      <Footer />
+      <main data-aos="fade-up">
+        <HeaderBar />
+        <Navbar />
+        <SliderComp />
+        <About />
+        <h1 data-aos="fade-up">Animated Heading</h1>
+        <p data-aos="zoom-in" data-aos-delay="100">
+          Animated Paragraph
+        </p>
+        <ServicesDetails />
+        <Plans />
+        <ProjectsGallery />
+        <Footer />
+      </main>
     </>
   );
 }

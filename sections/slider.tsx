@@ -14,15 +14,29 @@ export default function SliderComp() {
     dots: true,
     infinite: true,
     speed: 500,
+    fade: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
     autoplay: true,
-    autoplaySpeed:6000
-
+    autoplaySpeed: 6000,
   };
-
-  const SliderContent = () => {
+  const services = [
+    { title: "Web Development", icon: "web_development" },
+    { title: "App Development", icon: "app_development" },
+    { title: "SEO", icon: "seo" },
+    { title: "Graphic Designing", icon: "graphic_designing" },
+    { title: "Video Editing", icon: "video_editing" },
+  ];
+  const SliderContent = ({
+    titleLine1,
+    titleLine2,
+    detail,
+  }: {
+    titleLine1: string;
+    titleLine2: string;
+    detail: string;
+  }) => {
     return (
       <div
         className={`
@@ -37,32 +51,32 @@ export default function SliderComp() {
         <TextWithBackground text="We are IT service agency" fontSize="22" />
         <h1
           className="
-      font-bold
-      text-7xl
-      max-md:text-[40px]
-      max-sm:text-[28px]
-      text-white
-      animate-text-right-fade-in
-      "
+          font-bold
+          text-6xl
+          leading-none/
+          max-md:text-[40px]
+          max-sm:text-[28px]
+          text-white
+          animate-text-right-fade-in
+          "
         >
-          Prosper in this volatile
+          {titleLine1}
           <br />
-          market funding.
+          {titleLine2}
         </h1>
         <p
           className="
-      text-xl
-      max-md:text-base
-      max-sm:text-sm
-      text-white
-      w-[50%]
-      max-lg:w-[60%]
-      max-md:w-[90%]
-      animate-text-right-fade-in
-      "
+          text-xl
+          max-md:text-base
+          max-sm:text-sm
+          text-white
+          w-[50%]
+          max-lg:w-[60%]
+          max-md:w-[90%]
+          animate-text-right-fade-in
+          "
         >
-          We place you at the centre of international networks to advance your
-          strategic interests.
+          {detail}
         </p>
         <div className="pt-4">
           <ButtonComp text="Our Team" className="animate-text-right-fade-in" />
@@ -73,14 +87,18 @@ export default function SliderComp() {
 
   return (
     <div>
-      <Slider {...settings}>
+      <Slider {...settings} data-aos="fade-up">
         <div
           className={`
           ${styles.container}
           bg-[url('../assets/slider_pic1.jpg')]
           `}
         >
-          <SliderContent />
+          <SliderContent
+            titleLine1="Nourishing Businesses"
+            titleLine2="through Digital Technology."
+            detail="Stay ahead in the race and keep your competitive edge intact with our state-of-the-art digital solutions."
+          />
         </div>
         <div
           className={`
@@ -88,7 +106,12 @@ export default function SliderComp() {
           bg-[url('../assets/slider_pic2.jpeg')]
           `}
         >
-          <SliderContent />
+          <SliderContent
+            titleLine1="Welcome to the World"
+            titleLine2="of Cutting-Edge IT Solutions"
+            detail="Stay ahead of the competition and maintain your competitive edge with
+           our cutting-edge digital solutions"
+          />
         </div>
       </Slider>
 
@@ -116,11 +139,17 @@ export default function SliderComp() {
               max-md:flex-col
               "
         >
-          <ServiceCard />
-          <ServiceCard />
-          <ServiceCard />
-          <ServiceCard />
-          <ServiceCard />
+          {services.map((service, index) => {
+            return (
+              <>
+                <ServiceCard
+                  service={service.title}
+                  key={index}
+                  icon={`${service.icon}.png`}
+                />
+              </>
+            );
+          })}
         </div>
         <div
           className="

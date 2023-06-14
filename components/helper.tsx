@@ -44,7 +44,7 @@ export const H4 = ({
   text: string;
   className?: string;
 }) => {
-  return <h2 className={`text-xl font-bold ${className}`}>{text}</h2>;
+  return <h4 className={`text-xl font-bold ${className}`}>{text}</h4>;
 };
 export const H3 = ({
   text,

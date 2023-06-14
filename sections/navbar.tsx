@@ -30,25 +30,26 @@ function Navbar() {
     </nav>
     <nav
       className="
-    flex
-    items-center
-    border-gray-300
-    border-t
-    gap-4
-    pr-4
-    max-lg:hidden
-    "
+      flex
+      items-center
+      border-gray-300
+      border-t
+      gap-4
+      pr-4
+      max-lg:hidden
+      "
     >
       <Image src={require("../assets/logo.png")} alt="logo" className="w-32" />
       <div className="flex flex-1 px-[5%] justify-between
       
       ">
         <H6 text={"Home"} />
-        <H6 text={"Pages"} />
+        <H6 text={"About us"} />
         <H6 text={"Services"} />
+        <H6 text={"Pricing Plans"} />
         <H6 text={"Portfolio"} />
         <H6 text={"Blog"} />
-        <H6 text={"Elements"} />
+        <H6 text={"Contact us"} />
       </div>
       <form
         action="#"
