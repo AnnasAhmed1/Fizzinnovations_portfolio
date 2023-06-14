@@ -17,7 +17,7 @@ const ServiceDetailsCardHover = ({
       className="
       flex
       flex-col
-      justify-center
+      justify-center/
       items-center
       w-[290px]
       max-lg:w-[90%]
@@ -28,14 +28,16 @@ const ServiceDetailsCardHover = ({
       px-8/
       pb-12
       max-md:pb-6
-      gap-12
-      max-lg:gap-8
+      gap-12/
+      max-lg:gap-8/
       container
       transition-all
       duration-500
       relative
       rounded-tr-[50px]
       mt-[20px]
+      h-[360px]
+      justify-between
       "
     >
       <div
@@ -47,7 +49,7 @@ const ServiceDetailsCardHover = ({
       >
         <div
           className={`
-          h-[152px]
+          h-[160px]
           w-full
           ${styles.overlayBackground}
           flex

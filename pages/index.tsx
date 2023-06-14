@@ -33,10 +33,10 @@ export default function Home() {
         <Navbar />
         <SliderComp />
         <About />
-        <h1 data-aos="fade-up">Animated Heading</h1>
+        {/* <h1 data-aos="fade-up">Animated Heading</h1>
         <p data-aos="zoom-in" data-aos-delay="100">
           Animated Paragraph
-        </p>
+        </p> */}
         <ServicesDetails />
         <Plans />
         <ProjectsGallery />

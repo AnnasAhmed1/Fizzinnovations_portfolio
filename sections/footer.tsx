@@ -28,14 +28,13 @@ const Footer = () => {
       `}
       >
         <div
-        className="
+          className="
         bg-[#0F0F35]
         bg-opacity-80
         "
         >
-
-        <div
-          className="
+          <div
+            className="
           bg-[#0F0F35]
           bg-opacity-75
           flex
@@ -48,35 +47,32 @@ const Footer = () => {
           px-[10%]
           
           "
-        >
-          <div
-            className="
-            
-            "
           >
-            <h1
-              className="
+            <div className="">
+              <h1
+                className="
             text-[30px]
             max-lg:text-2xl
             text-white
             font-bold
             "
-            >
-              Ready to shake things up with Fizz Innovations?
-            </h1>
-            <p
-              className="
+              >
+                Ready to shake things up with Fizz Innovations?
+              </h1>
+              <p
+                className="
             font-[16px]
             text-[#C9C8C8]
             "
-            >
-              Drop us a line today, and we'll set up a free consultation to discuss your project
-            </p>
+              >
+                Drop us a line today, and we'll set up a free consultation to
+                discuss your project
+              </p>
+            </div>
+
+            <ButtonComp text="Get a quote" />
           </div>
 
-          <ButtonComp text="Get a quote" />
-        </div>
-     
           <div
             className="
             text-white
@@ -91,13 +87,13 @@ const Footer = () => {
             "
           >
             <div
-             className="
+              className="
              flex
              flex-col
              gap-[20px]
              "
             >
-               <div>
+              <div>
                 <H2 text="About Us" className="text-white" />
                 <div
                   className="
@@ -116,7 +112,7 @@ const Footer = () => {
               /> */}
               <p
                 className="
-              text-[#bababa]
+              text-[#C9C8C8]
               "
               >
                 We work with a passion of taking challenges and creating new
@@ -157,7 +153,7 @@ const Footer = () => {
               </div>
               <p
                 className="
-          text-[#bababa]
+          text-[#C9C8C8]
           "
               >
                 Subscribe our newsletter to get our latest update & news.
@@ -202,7 +198,7 @@ const Footer = () => {
                 {socialMedia.map((v, i) => (
                   <p
                     className="
-                  text-[#bababa]
+                  text-[#C9C8C8]
                   "
                   >
                     {v}
@@ -232,7 +228,7 @@ const Footer = () => {
 
               <p
                 className="
-            text-[#bababa]
+            text-[#C9C8C8]
             text-[14px]
             flex
             items-center
@@ -244,7 +240,7 @@ const Footer = () => {
               </p>
               <p
                 className="
-            text-[#bababa]
+            text-[#C9C8C8]
             text-[14px]
             flex
             items-center
@@ -263,7 +259,7 @@ const Footer = () => {
                 Open Hours:
                 <br />
                 <span
-                  className="font-normal text-[#bababa]
+                  className="font-normal text-[#C9C8C8]
              "
                 >
                   Mon-Sun: 9 am - 12 am
@@ -325,8 +321,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        </div>
-
+      </div>
     </footer>
   );
 };

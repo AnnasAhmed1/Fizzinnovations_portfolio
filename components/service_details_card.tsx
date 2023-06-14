@@ -25,12 +25,14 @@ const ServiceDetailsCard = ({
       w-[290px]
       max-lg:w-[90%]
       max-sm:w-full
-      text-center
+      text-center/
       bg-white
       shadow-sm
-      px-8
+      px-4
+      text-[14px]/
+      text-justify
       max-lg:px-6
-      py-16
+      py-16/
       max-lg:py-12
       gap-4
       container
@@ -38,6 +40,7 @@ const ServiceDetailsCard = ({
       relative
       rounded-tl-[50px]
       mt-[80px]
+      h-[300px]
       `}
     >
       <div
@@ -75,7 +78,7 @@ const ServiceDetailsCard = ({
         rounded-[50px]
         "
       ></div>
-      <p className="text-[#57586d]">
+      <p className="text-[#57586d] pt-1">
         {description}
       </p>
     </div>

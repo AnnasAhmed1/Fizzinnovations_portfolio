@@ -2,6 +2,7 @@ import { H1 } from "@/components/helper";
 import ProjectFrame from "@/components/project_frame";
 import { Grid } from "@mui/material";
 import React from "react";
+import styles from '../styles/Home.module.css'
 
 const ProjectsGallery = () => {
   const projects = [
@@ -35,7 +36,8 @@ const ProjectsGallery = () => {
       <Grid container spacing={3}>
         {projects?.map((video, i) => (
           <Grid
-            className="h-[300px max-lg:h-[400px] max-md:h-[300px] max-sm:h-[200px]"
+            // className="h-[300px max-lg:h-[400px] max-md:h-[300px] max-sm:h-[200px]"
+            className={`${styles.footerGrid}`}
             // style={{ height: "300px" }}
             xs={12}
             sm={12}

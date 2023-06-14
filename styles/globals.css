@@ -15,6 +15,24 @@
   margin: 0;
 }
 
+.slick-prev, .slick-next{
+
+  top: 100% !important;
+}
+
+.slick-prev{
+left: 0 !important;
+} .slick-next{
+right: 30px !important;
+}
+
+/* .slick-prev::before, .slick-next::before{
+  font-size: 50px !important;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 0 13px rgba(1,25,59,.1)!important;
+} */
+
 .container {
   position: relative;
 }
@@ -69,4 +87,21 @@
     padding-left: 3%;
     padding-right: 3%;
   }
+}
+
+
+.slick-dots {
+  bottom: -20px; /* Adjust this value to position the dots as per your requirement */
+}
+
+.custom-dots li {
+  display: inline-block;
+  margin: 0 5px;
+  width: 100px;
+  height: 2px;
+  background-color: var(--inactiveDotColor);
+}
+
+.custom-dots li.slick-active {
+  background-color: var(--activeDotColor);
 }
