@@ -87,7 +87,7 @@ export default function ServiceDetailsSlider() {
     return (
       <div
         className={className}
-        style={{ ...style,color:"black" }}
+        style={{ ...style, color: "black" }}
         onClick={onClick}
       >
         <ArrowForwardIosIcon />
@@ -162,6 +162,7 @@ export default function ServiceDetailsSlider() {
       >
         {services.map((service, index) => (
           <NewComp
+            key={index}
             service={service}
             index={index}
             cardHover={cardHover}
