@@ -97,11 +97,23 @@ const Footer = () => {
              gap-[20px]
              "
             >
-              <Image
+               <div>
+                <H2 text="About Us" className="text-white" />
+                <div
+                  className="
+                bg-[#1475F7]
+                w-8
+                h-[2px]
+                rounded-lg
+                my-2
+                "
+                ></div>
+              </div>
+              {/* <Image
                 src={require("../assets/logo.png")}
                 alt="logo"
                 className="w-24"
-              />
+              /> */}
               <p
                 className="
               text-[#bababa]
