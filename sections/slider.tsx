@@ -38,19 +38,22 @@ export default function SliderComp() {
     detail: string;
   }) => {
     return (
-      <div
-        className={`
+      <div id="home" className="bg-[rgba(0,0,0,0.4)]">
+        <div
+          className={`
    ${styles.purpleOverlay}
       flex
       flex-col
       gap-6
+      max-sm:gap-14
       px-[10%]
       justify-center
+      max-sm:h-[0.5vh]
       `}
-      >
-        <TextWithBackground text="We are IT service agency" fontSize="22" />
-        <h1
-          className="
+        >
+          <TextWithBackground text="We are IT service agency" fontSize="22" />
+          <h1
+            className="
           font-bold
           text-6xl
           leading-none/
@@ -59,13 +62,13 @@ export default function SliderComp() {
           text-white
           animate-text-right-fade-in
           "
-        >
-          {titleLine1}
-          <br />
-          {titleLine2}
-        </h1>
-        <p
-          className="
+          >
+            {titleLine1}
+            <br />
+            {titleLine2}
+          </h1>
+          <p
+            className="
           text-xl
           max-md:text-base
           max-sm:text-sm
@@ -75,11 +78,15 @@ export default function SliderComp() {
           max-md:w-[90%]
           animate-text-right-fade-in
           "
-        >
-          {detail}
-        </p>
-        <div className="pt-4">
-          <ButtonComp text="Our Team" className="animate-text-right-fade-in" />
+          >
+            {detail}
+          </p>
+          <div className="pt-4">
+            <ButtonComp
+              text="Our Team"
+              className="animate-text-right-fade-in"
+            />
+          </div>
         </div>
       </div>
     );
@@ -91,7 +98,8 @@ export default function SliderComp() {
         <div
           className={`
           ${styles.container}
-          bg-[url('../assets/slider_pic1.jpg')]
+          bg-[url('../assets/bg_slider1.jpeg')]
+          
           `}
         >
           <SliderContent
@@ -103,7 +111,7 @@ export default function SliderComp() {
         <div
           className={`
           ${styles.container}
-          bg-[url('../assets/slider_pic2.jpeg')]
+          bg-[url('../assets/bg-slider2.jpeg')]
           `}
         >
           <SliderContent

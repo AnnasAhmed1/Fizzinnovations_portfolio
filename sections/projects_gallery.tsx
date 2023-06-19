@@ -2,7 +2,7 @@ import { H1 } from "@/components/helper";
 import ProjectFrame from "@/components/project_frame";
 import { Grid } from "@mui/material";
 import React from "react";
-import styles from '../styles/Home.module.css'
+import styles from "../styles/Home.module.css";
 
 const ProjectsGallery = () => {
   const projects = [
@@ -23,7 +23,7 @@ const ProjectsGallery = () => {
     },
   ];
   return (
-    <div className="px-[10%]">
+    <div id="projects" className="px-[10%]">
       <H1
         initialText="Our"
         colouredText=" Recent "

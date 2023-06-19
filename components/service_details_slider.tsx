@@ -17,6 +17,31 @@ export default function ServiceDetailsSlider() {
   const [isHovered, setIsHovered] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [cardHover, setCardHover] = useState(false);
+  const CustomNextArrow = ({ onClick }: { onClick: () => void }) => (
+    <button
+      className="custom-next-arrow bg-white hover:bg-blue-purple-gradient shadow-arrows rounded-[50%] text-center flex items-center justify-center"
+      onClick={onClick}
+    >
+      <ArrowForwardIosIcon
+        style={{
+          fontSize: "16px",
+        }}
+      />
+    </button>
+  );
+
+  const CustomPrevArrow = ({ onClick }: { onClick: () => void }) => (
+    <button
+      className="custom-prev-arrow pl-[8px] bg-white hover:bg-blue-purple-gradient shadow-arrows rounded-[50%] text-center flex items-center justify-center"
+      onClick={onClick}
+    >
+      <ArrowBackIosIcon
+        style={{
+          fontSize: "16px",
+        }}
+      />
+    </button>
+  );
 
   const handleHoverEnter = (index: number) => {
     services[index].hover = true;
@@ -37,11 +62,26 @@ export default function ServiceDetailsSlider() {
     dots: true,
     dotsClass: "slick-dots custom-dots",
     // dots: true,
+    // arrows: false,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 2,
-    arrows: true,
+
+    nextArrow: (
+      <CustomNextArrow
+        onClick={function (): void {
+          throw new Error("Function not implemented.");
+        }}
+      />
+    ),
+    prevArrow: (
+      <CustomPrevArrow
+        onClick={function (): void {
+          throw new Error("Function not implemented.");
+        }}
+      />
+    ),
     // nextArrow: <SamplePrevArrow />,
     // prevArrow: <SamplePrevArrow />,
     responsive: [
@@ -62,6 +102,8 @@ export default function ServiceDetailsSlider() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          dots: false,
+          arrows: false,
         },
       },
     ],
@@ -82,18 +124,18 @@ export default function ServiceDetailsSlider() {
     console.log(oldIndex);
     setCurrentSlide(newIndex / 2);
   };
-  function SamplePrevArrow(props: any) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{ ...style, color: "black" }}
-        onClick={onClick}
-      >
-        <ArrowForwardIosIcon />
-      </div>
-    );
-  }
+  // function SamplePrevArrow(props: any) {
+  //   const { className, style, onClick } = props;
+  //   return (
+  //     <div
+  //       className={className}
+  //       style={{ ...style, color: "black" }}
+  //       onClick={onClick}
+  //     >
+  //       <ArrowForwardIosIcon />
+  //     </div>
+  //   );
+  // }
 
   const handleAfterChange = (currentIndex: any) => {
     console.log(currentIndex);

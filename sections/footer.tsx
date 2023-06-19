@@ -21,7 +21,7 @@ const Footer = () => {
     <TwitterIcon />,
   ];
   return (
-    <footer>
+    <footer id="contact">
       <div
         className={`${Styles.footerBackground} 
      

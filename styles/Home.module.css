@@ -80,3 +80,17 @@
     height: 250px;
   }
 }
+
+@media (max-width:576px) {
+  /* .container {
+    min-height: 60vh;
+  } */
+  .container {
+    min-height: 70vh;
+  }
+  .purpleOverlay {
+    min-height: 70vh;
+  }
+  
+
+}

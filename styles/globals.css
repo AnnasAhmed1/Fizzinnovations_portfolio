@@ -5,7 +5,9 @@
 .mainSection{
   padding: 0% 10%;
 }
-
+body{
+  scroll-behavior: smooth;
+}
 .details_slider .slick-dots{
   display: flex;
 }
@@ -15,15 +17,34 @@
   margin: 0;
 }
 
-.slick-prev, .slick-next{
+/* .slick-prev, .slick-next{
 
   top: 100% !important;
-}
+  border: 1px solid black;
+} */
+/* .slick-prev::before, .slick-next::before{
+  border: 1px solid black;
+  border-radius: 20px;
+  font-size: 40px !important;
+  color: red !important;
+} */
 
-.slick-prev{
+/* .slick-prev{
 left: 0 !important;
 } .slick-next{
 right: 30px !important;
+} */
+.custom-next-arrow,
+.custom-prev-arrow {
+  @apply absolute top-full transform -translate-y-1/2 w-10 h-10 cursor-pointer;
+}
+
+.custom-next-arrow {
+  @apply left-[100%];
+}
+
+.custom-prev-arrow {
+  @apply right-[100%];
 }
 
 /* .slick-prev::before, .slick-next::before{

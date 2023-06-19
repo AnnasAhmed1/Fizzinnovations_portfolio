@@ -72,6 +72,7 @@ module.exports = {
         custom: "0 11px 27px rgba(0,9,71,.13)",
         dark: "0 6px 6px rgba(0,108,255,.3)",
         cardShadow: "0 1px 10px rgba(0,0,0,6%)",
+        arrows: "0 0 13px rgba(1, 25, 59, 0.1)",
       },
     },
   },

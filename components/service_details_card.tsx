@@ -78,9 +78,7 @@ const ServiceDetailsCard = ({
         rounded-[50px]
         "
       ></div>
-      <p className="text-[#57586d] pt-1">
-        {description}
-      </p>
+      <p className="text-[#57586d] pt-1">{description}</p>
     </div>
   );
 };

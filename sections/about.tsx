@@ -11,6 +11,7 @@ import TextWithBackground from "@/components/text_with_background";
 const About = () => {
   return (
     <section
+      id="about"
       className="
       flex
       px-[12%]
@@ -19,7 +20,6 @@ const About = () => {
       min-h-[100vh]
       max-lg:py-[12%]
       max-md:py-[20%]
-      max-sm:py-[35%]
       max-md:flex-col
       max-md:gap-12
       "

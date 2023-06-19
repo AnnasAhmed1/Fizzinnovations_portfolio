@@ -15,11 +15,15 @@ import Footer from "@/sections/footer";
 import { useEffect } from "react";
 import Plans from "@/sections/plans";
 import ProjectsGallery from "@/sections/projects_gallery";
+import Image from "next/image";
 
 export default function Home() {
   useEffect(() => {
     initializeAOS();
   }, []);
+  const handleButtonClick = () => {
+    window.open("https://api.whatsapp.com/send?phone=03326556262", "_blank");
+  };
   return (
     <>
       <Head>
@@ -38,9 +42,32 @@ export default function Home() {
           Animated Paragraph
         </p> */}
         <ServicesDetails />
-        <Plans />
+        {/* <Plans /> */}
         <ProjectsGallery />
         <Footer />
+        <button
+          onClick={handleButtonClick}
+          className="
+        fixed
+        right-4
+        bottom-4
+        z-[9999]
+        "
+        >
+          {/* <div
+          className="bg-gray-400
+          p-4
+          rounded-xl
+          "
+          >
+            <p>for any queries</p>
+          </div> */}
+          <Image
+            src={require("../assets/icons/whatsapp_icon.png")}
+            alt="whatsapp"
+            className="w-12  z-[-1] animate-bounce"
+          />
+        </button>
       </main>
     </>
   );
