@@ -1,5 +1,4 @@
 import React from "react";
-import HeartIcon from "./hea";
 import Image from "next/image";
 import { H3, H4, H5 } from "./helper";
 import styles from "../styles/Home.module.css";
