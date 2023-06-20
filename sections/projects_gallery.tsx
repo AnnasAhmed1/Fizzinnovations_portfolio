@@ -21,6 +21,12 @@ const ProjectsGallery = () => {
     {
       urlId: "1uh4QVfW0mau7DdESkVz6YT11pL45dv-7",
     },
+    {
+      urlId: "1_G0QBWapdWvNV_5Sy358Q3zB-SfFzOJW",
+    },
+    {
+      urlId: "1divQzOJKBoiwdrOiJhMiKeww51VZDneF",
+    },
   ];
   return (
     <div id="projects" className="px-[10%]">
